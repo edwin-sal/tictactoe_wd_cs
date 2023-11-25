@@ -108,6 +108,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   padding: 20px;
   width: 350px;
   border: 3px solid whitesmoke;
@@ -123,7 +124,7 @@ h1 {
 }
 
 .icon {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .text {
