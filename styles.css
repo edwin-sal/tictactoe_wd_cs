@@ -62,12 +62,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 200px;
   height: 100%;
 }
 
 .homepage-items {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 h1 {
@@ -96,11 +98,12 @@ h1 {
   color: #2e313a;
 }
 
-#about-page {
+#about-cards {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .card {
