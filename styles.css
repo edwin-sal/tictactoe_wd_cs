@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: whitesmoke;
+  background-color: #111215;
+  height: 100vh;
+}
+
+header {
+  padding: 20px 30px 0 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  list-style: none;
+}
+
+nav li a {
+  color: whitesmoke;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid whitesmoke;
+}
+
+main {
+  height: 94%;
+}
+
+#homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 80px;
+}
+
+.homepage-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+}
+
+#homepage p {
+  font-family: "Forum", serif;
+  font-size: 2rem;
+}
+
+#homepage a {
+  display: inline-block;
+  color: whitesmoke;
+  text-decoration: none;
+  border: 2px solid whitesmoke;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#homepage a:hover {
+  background-color: whitesmoke;
+  color: #111215;
+}
