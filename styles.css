@@ -89,9 +89,11 @@ h1 {
   border: 2px solid whitesmoke;
   padding: 0.5rem;
   text-align: center;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
 
 #homepage a:hover {
+  animation: ease-in-out;
   background-color: whitesmoke;
   color: #111215;
 }
