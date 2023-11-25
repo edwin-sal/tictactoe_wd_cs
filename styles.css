@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 
 * {
   box-sizing: border-box;
@@ -116,6 +117,10 @@ h1 {
   width: 350px;
   border: 3px solid whitesmoke;
   border-radius: 3px;
+}
+
+.card h3 {
+    font-size: 2rem;
 }
 
 .about {
