@@ -63,13 +63,11 @@ main {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 80px;
 }
 
 .homepage-items {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 h1 {
@@ -95,5 +93,59 @@ h1 {
 #homepage a:hover {
   animation: ease-in-out;
   background-color: whitesmoke;
+  color: #2e313a;
+}
+
+#about-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 350px;
+  border: 3px solid whitesmoke;
+  border-radius: 3px;
+}
+
+.about {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  padding-top: 20px;
+}
+
+.text {
+  text-align: center;
+}
+
+.button {
+  height: 50px;
+}
+
+.button a {
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 5px 0;
   color: #111215;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.button a:hover {
+    background-color: #111215;
+    color: whitesmoke;
 }
