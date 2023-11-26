@@ -65,6 +65,10 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.tile {
+  cursor: pointer;
+}
+
 .p0 {
   /* background-color:darkgray; */
   border-bottom: 5px solid whitesmoke;
