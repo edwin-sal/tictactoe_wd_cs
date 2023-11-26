@@ -52,6 +52,16 @@ main {
   flex-direction: column;
 }
 
+#login {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
 form {
   /* background-color: orange;  */
   display: flex;
@@ -82,7 +92,7 @@ button {
   border: 0;
   border-radius: 30px;
   background-color: #550000;
-  color: whitesmoke;
+  color: #757575;
   display: block;
   width: 100%;
   height: 60px;
@@ -95,10 +105,10 @@ button {
 
 button:hover {
   background-color: #890000;
+  color: whitesmoke;
 }
 
-footer {
-    margin-top: 20px;
+footer { 
     text-align: center;
 }
 

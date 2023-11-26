@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
     <header>
       <a href="index.html">!TicTacToe</a>
     </header>
     <main>
-      <div id="login">
-        <h1 id="main-heading">Login with your Account</h1>
+      <div id="sign-up">
+        <h1 id="main-heading">Sign up with a new Account</h1>
         <form action="">
+          <div class="name-input">
+            <input type="text" id="first-name" placeholder="Enter your first name" class="input-field">
+            <input type="text" id="last-name" placeholder="Enter your last name" class="input-field">
+          </div>
           <input
             type="email"
             id="email"
@@ -26,10 +30,12 @@
             placeholder="Enter your password"
             class="input-field"
           />
-          <button type="submit">Login</button>
+          <button type="submit">Sign up</button>
         </form>
         <footer>
-            <p>Not a member yet? <a href="./signup.html" id="myLink">Sign up </a></p>
+          <p>
+            Already have an account?<strong><a href="./login.html" id="myLink">Login</a></strong>
+          </p>
         </footer>
       </div>
     </main>
