@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap");
 
 * {
   box-sizing: border-box;
@@ -99,11 +100,11 @@ h1 {
 }
 
 #about-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 #about-history {
@@ -112,11 +113,58 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-direction:row;
+  gap: 100px;
 }
 
 #about-history img {
   border-radius: 30px;
+}
+
+.history-card-back {
+  width: 400px;
+  height: 500px;
+  background-color:#111215;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 5px solid whitesmoke;
+}
+
+.history-card-back p {
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.history {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.history div {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 1s;
+
+}
+
+.history-card-back {
+  transform: rotateY(180deg);
+}
+
+.history:hover .history-card-back {
+  transform: rotateY(0deg);
+}
+
+.history:hover .history-card-front {
+  transform: rotateY(-180deg);
 }
 
 /* #about-header h2 {
