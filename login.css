@@ -24,9 +24,10 @@ header a {
   text-decoration: none;
 
   position: relative;
+  padding: 0 10px;
 }
 
-header a::before {
+header a::before, footer a::before {
   background: #890000;
   content: "";
   inset: 0;
@@ -37,7 +38,7 @@ header a::before {
   z-index: -1;
 }
 
-header a:hover::before {
+header a:hover::before, footer a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -68,12 +69,13 @@ form {
   color: whitesmoke;
   height: 50px;
   padding: 0 0.7em;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   transition: all 0.25s ease-in-out;
 }
 
-.input-field:hover, .input-field:focus {
-    border-bottom: 2px solid whitesmoke;
+.input-field:hover,
+.input-field:focus {
+  border-bottom: 2px solid whitesmoke;
 }
 
 button {
@@ -92,5 +94,17 @@ button {
 }
 
 button:hover {
-background-color: #890000;
+  background-color: #890000;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
+    padding: 0 5px;
 }
