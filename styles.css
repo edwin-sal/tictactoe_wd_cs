@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 
 * {
   box-sizing: border-box;
@@ -99,11 +98,24 @@ h1 {
   color: #2e313a;
 }
 
-#about-cards {
-  height: 100vh;
+#about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#about-header h2 {
+    font-size: 3rem;
+}
+
+#about-cards {  
+  background-color:#111215;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
@@ -115,12 +127,12 @@ h1 {
   gap: 10px;
   padding: 20px;
   width: 350px;
+  height: 500px;
   border: 3px solid whitesmoke;
-  border-radius: 3px;
 }
 
 .card h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .about {
@@ -155,6 +167,6 @@ h1 {
 }
 
 .button a:hover {
-    background-color: #111215;
-    color: whitesmoke;
+  background-color: #111215;
+  color: whitesmoke;
 }
