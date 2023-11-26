@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111215;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+    padding: 30px 0 0 45px;
+}
+
+header a {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: whitesmoke;
+  text-decoration: none;
+
+  position: relative;
+}
+
+header a::before {
+  background: #890000;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+header a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+main {
+  height: 80vh;
+  /* width  : 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  /* background-color: orange;  */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-field {
+  border: 0;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  /* border: 2px solid whitesmoke; */
+  border-bottom: 2px solid whitesmoke;
+  color: whitesmoke;
+  height: 50px;
+  padding: 0 0.7em;
+  font-size: 1.2em;
+}
+
+button {
+  border: 0;
+  border-radius: 30px;
+  background-color: #890000;
+  color: whitesmoke;
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0 0.7em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
