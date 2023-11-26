@@ -40,3 +40,9 @@ body {
     background-color: #111215;
     color: whitesmoke;
 }
+
+.board {
+    width: 500px;
+    height: 500px;
+    background-color: blanchedalmond;
+}
