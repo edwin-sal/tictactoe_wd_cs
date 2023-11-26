@@ -39,10 +39,68 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #111215;
     color: whitesmoke;
+    /* height: 100vh; */
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .board {
     width: 500px;
     height: 500px;
-    background-color: blanchedalmond;
+    /* background-color: lightcoral; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.p0 {
+  /* background-color:darkgray; */
+  border-bottom: 5px solid whitesmoke;
+  border-right: 5px solid whitesmoke;
+}
+
+.p1 {
+  /* background-color: brown; */
+  border-bottom: 5px solid whitesmoke;
+  border-right: 5px solid whitesmoke;
+}
+
+.p2 {
+  /* background-color: rgb(30, 102, 210); */
+  border-bottom: 5px solid whitesmoke;
+}
+
+.p3 {
+  /* background-color: coral; */
+  border-bottom: 5px solid whitesmoke;
+  border-right: 5px solid whitesmoke;
+}
+.p4 {
+  /* background-color: aqua; */
+  border-bottom: 5px solid whitesmoke;
+  border-right: 5px solid whitesmoke;
+}
+
+.p5 {
+  /* background-color:burlywood; */
+  border-bottom: 5px solid whitesmoke;
+}
+
+.p6 {
+  /* background-color: crimson; */
+  border-right: 5px solid whitesmoke;
+}
+
+.p7 {
+  /* background-color: darkgreen; */
+  border-right: 5px solid whitesmoke;
+}
+
+.p8 {
+  /* background-color: darkslateblue; */
 }
