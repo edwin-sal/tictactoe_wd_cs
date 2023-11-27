@@ -16,14 +16,20 @@ function setIconX(id, icon) {
     document.getElementById(id).src = "./images/x.svg";
     document.getElementById(id).style.width = "150px";
     markBoard(id);
+    if (checkWin("x")) {
+      console.log("Player X Wins!");
+    }
+
     player1Move = false;
     player2Move = true;
-    
   } else if (player2Move) {
     document.getElementById(id).src = "./images/o.svg";
     document.getElementById(id).style.width = "125px";
     markBoard(id);
-    console
+    if (checkWin("o")) {
+      console.log("Player O Wins!");
+    }
+
     player1Move = true;
     player2Move = false;
   }
@@ -96,5 +102,53 @@ function markBoard(id) {
   }
 
   console.log(boardBool);
-  console.log(boardIcon)
+  console.log(boardIcon);
+}
+
+function checkWin(icon) {
+  if (boardIcon[0] == icon && boardIcon[1] == icon && boardIcon[2] == icon) {
+    return true;
+  } else if (
+    boardIcon[0] == icon &&
+    boardIcon[3] == icon &&
+    boardIcon[6] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[0] == icon &&
+    boardIcon[4] == icon &&
+    boardIcon[8] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[1] == icon &&
+    boardIcon[4] == icon &&
+    boardIcon[7] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[2] == icon &&
+    boardIcon[4] == icon &&
+    boardIcon[6] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[2] == icon &&
+    boardIcon[5] == icon &&
+    boardIcon[8] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[3] == icon &&
+    boardIcon[4] == icon &&
+    boardIcon[5] == icon
+  ) {
+    return true;
+  } else if (
+    boardIcon[6] == icon &&
+    boardIcon[7] == icon &&
+    boardIcon[8] == icon
+  ) {
+    return true;
+  }
 }
