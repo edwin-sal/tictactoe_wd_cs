@@ -6,9 +6,20 @@ let tieScore = 0;
 
 let boardBool = [false, false, false, false, false, false, false, false, false];
 let boardIcon = ["", "", "", "", "", "", "", "", ""];
+let boardIDs = [
+  "p0-icon",
+  "p1-icon",
+  "p2-icon",
+  "p3-icon",
+  "p4-icon",
+  "p5-icon",
+  "p6-icon",
+  "p7-icon",
+  "p8-icon",
+];
 
-console.log(boardBool);
-console.log(boardIcon);
+// console.log(boardBool);
+// console.log(boardIcon);
 
 function changeColor(colorChoice) {
   document.getElementById("bot-name").style.color = colorChoice;
@@ -24,6 +35,18 @@ function isTie() {
   return true;
 }
 
+// Resets the array board and clear the icons
+function resetBoard() {
+  boardBool = [false, false, false, false, false, false, false, false, false];
+  boardIcon = ["", "", "", "", "", "", "", "", ""];
+  console.log(boardBool);
+  console.log(boardIcon);
+
+  for (let i = 0; i < boardIDs.length; i++) {
+    document.getElementById(boardIDs[i]).src = ".";
+  }
+}
+
 // Sets the icon of the tile
 function setIconX(id, icon) {
   if (player1Move) {
@@ -34,11 +57,13 @@ function setIconX(id, icon) {
       console.log("Player X Wins!");
       player1Score++;
       document.getElementById("player-score").innerHTML = player1Score;
+      resetBoard();
     }
     if (isTie()) {
       console.log("tie");
       tieScore++;
       document.getElementById("tie-score").innerHTML = tieScore;
+      resetBoard();
     }
 
     player1Move = false;
@@ -51,9 +76,13 @@ function setIconX(id, icon) {
       console.log("Player O Wins!");
       player2Score++;
       document.getElementById("bot-score").innerHTML = player2Score;
+      resetBoard();
     }
     if (isTie()) {
       console.log("tie");
+      tieScore++;
+      document.getElementById("tie-score").innerHTML = tieScore;
+      resetBoard();
     }
 
     player1Move = true;
