@@ -11,6 +11,16 @@ function changeColor(colorChoice) {
   document.getElementById("bot-name").style.color = colorChoice;
 }
 
+// Check if there is a tie
+function isTie() {
+  for (let i = 0; i < boardBool.length; i++) {
+    if (boardBool[i] == false) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function setIconX(id, icon) {
   if (player1Move) {
     document.getElementById(id).src = "./images/x.svg";
@@ -18,6 +28,9 @@ function setIconX(id, icon) {
     markBoard(id);
     if (checkWin("x")) {
       console.log("Player X Wins!");
+    }
+    if(isTie()) {
+        console.log("tie");
     }
 
     player1Move = false;
@@ -28,6 +41,9 @@ function setIconX(id, icon) {
     markBoard(id);
     if (checkWin("o")) {
       console.log("Player O Wins!");
+    }
+    if (isTie()) {
+      console.log("tie");
     }
 
     player1Move = true;
