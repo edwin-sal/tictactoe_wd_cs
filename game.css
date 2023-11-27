@@ -72,6 +72,10 @@ main {
   cursor: pointer;
 }
 
+.tile:active {
+  cursor: default;
+}
+
 #p0 {
   /* background-color:darkgray; */
   border-bottom: 5px solid whitesmoke;

@@ -12,23 +12,37 @@
     </header>
     <main>
       <div class="board">
-        <div id="p0" class="tile"">
-          <img src="./images/x.svg" alt="X icon" width="150px" id="tile-icon">
+        <div id="p0" class="tile" onclick="setIconX('p0-icon', 'o')">
+          <img src="" id="p0-icon" />
         </div>
-        <div id="p1" class="tile">
-          <img src="./images/o.svg" alt="O icon" width="130px" id="tile-icon">
+        <div id="p1" class="tile" onclick="setIconX('p1-icon', 'x')">
+          <img src="" id="p1-icon" />
         </div>
-        <div id="p2" class="tile"></div>
-        <div id="p3" class="tile"></div>
-        <div id="p4" class="tile"></div>
-        <div id="p5" class="tile"></div>
-        <div id="p6" class="tile"></div>
-        <div id="p7" class="tile"></div>
-        <div id="p8" class="tile"></div>
+        <div id="p2" class="tile" onclick="setIconX('p2-icon', 'o')">
+          <img src="" id="p2-icon" />
+        </div>
+        <div id="p3" class="tile" onclick="setIconX('p3-icon', 'x')">
+          <img src="" id="p3-icon" />
+        </div>
+        <div id="p4" class="tile"  onclick="setIconX('p4-icon', 'o')">
+          <img src="" id="p4-icon" />
+        </div>
+        <div id="p5" class="tile"  onclick="setIconX('p5-icon', 'x')">
+          <img src="" id="p5-icon" />
+        </div>
+        <div id="p6" class="tile"  onclick="setIconX('p6-icon', 'o')">
+          <img src="" id="p6-icon" />
+        </div>
+        <div id="p7" class="tile"  onclick="setIconX('p7-icon', 'x')">
+          <img src="" id="p7-icon" />
+        </div>
+        <div id="p8" class="tile"  onclick="setIconX('p8-icon', 'o')">
+          <img src="" id="p8-icon" />
+        </div>
       </div>
       <div class="scoreboard">
-        <p class="player">Player</p>
-        <p class="player">Tie</p>
+        <p class="player" onclick="changeColor('#890000')">Player</p>
+        <p class="player" id="player-name">Tie</p>
         <p class="player" id="bot-name">Boss Bert</p>
         <p class="score">00</p>
         <p class="score">12</p>
