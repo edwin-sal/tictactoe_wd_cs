@@ -1,5 +1,8 @@
 let player1Move = true;
 let player2Move = false;
+let player1Score = 0;
+let player2Score = 0;
+let tieScore = 0;
 
 let boardBool = [false, false, false, false, false, false, false, false, false];
 let boardIcon = ["", "", "", "", "", "", "", "", ""];
@@ -29,9 +32,13 @@ function setIconX(id, icon) {
     markBoard(id);
     if (checkWin("x")) {
       console.log("Player X Wins!");
+      player1Score++;
+      document.getElementById("player-score").innerHTML = player1Score;
     }
     if (isTie()) {
       console.log("tie");
+      tieScore++;
+      document.getElementById("tie-score").innerHTML = tieScore;
     }
 
     player1Move = false;
@@ -42,6 +49,8 @@ function setIconX(id, icon) {
     markBoard(id);
     if (checkWin("o")) {
       console.log("Player O Wins!");
+      player2Score++;
+      document.getElementById("bot-score").innerHTML = player2Score;
     }
     if (isTie()) {
       console.log("tie");
@@ -122,7 +131,6 @@ function markBoard(id) {
   console.log(boardBool);
   console.log(boardIcon);
 }
-
 
 // Checks if there is a winner
 function checkWin(icon) {
