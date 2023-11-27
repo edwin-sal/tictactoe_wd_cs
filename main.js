@@ -21,6 +21,7 @@ function isTie() {
   return true;
 }
 
+// Sets the icon of the tile
 function setIconX(id, icon) {
   if (player1Move) {
     document.getElementById(id).src = "./images/x.svg";
@@ -29,8 +30,8 @@ function setIconX(id, icon) {
     if (checkWin("x")) {
       console.log("Player X Wins!");
     }
-    if(isTie()) {
-        console.log("tie");
+    if (isTie()) {
+      console.log("tie");
     }
 
     player1Move = false;
@@ -51,6 +52,7 @@ function setIconX(id, icon) {
   }
 }
 
+// Marks the boolean board behin the scene to keep track of the unused and useddtiles
 function markBoard(id) {
   if (id == "p0-icon") {
     boardBool[0] = true;
@@ -121,6 +123,8 @@ function markBoard(id) {
   console.log(boardIcon);
 }
 
+
+// Checks if there is a winner
 function checkWin(icon) {
   if (boardIcon[0] == icon && boardIcon[1] == icon && boardIcon[2] == icon) {
     return true;
