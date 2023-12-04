@@ -34,6 +34,7 @@ function tileClick(id) {
 
       // End game if AI wins
       aiAction();
+      // setTimeout(aiAction, 500);
       if (checkWinner("X")) {
         console.log("AI WINS!");
         aiScore++;
@@ -46,6 +47,8 @@ function tileClick(id) {
         console.log("ITS ATAAAY");
         setTimeout(resetBoard, 3000);
         return;
+      } else{
+        console.log("Not ye")
       }
     } else {
       console.log("Tile already selected!");
@@ -69,13 +72,15 @@ function aiAction() {
   var indexByAI = minimax(origBoard, aiPlayer).index;
   console.log("Index by AI: " + indexByAI);
   var id = tileID(indexByAI);
-  setIconX(id);
   origBoard[indexByAI] = "X";
   console.log("Tile ID by AI: " + id);
   console.log("Board after AI move: " + origBoard);
   aiMove = false;
   playerMove = true;
   console.log("End of line by ai action");
+    setTimeout(() => {
+      setIconX(id);
+    }, 500);
 }
 
 function setIconX(id) {

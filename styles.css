@@ -199,6 +199,11 @@ h1 {
   text-align: center;
   padding: 20px;
   border: 5px solid whitesmoke;
+  transition: transform .4s;
+}
+
+.technology:hover {
+  transform: scale(1.1  );
 }
 
 .technologies-cards {
