@@ -4,39 +4,55 @@ let playerMove = true; // Player = O
 let aiMove = false; // Player = X
 let playerScore = 0;
 let aiScore = 0;
+let tieScore = 0;
 let winningCombination = [];
 let winningComboID = [];
 
 console.log("Initial board: " + origBoard);
 
 function tileClick(id) {
-  // End game if player wins
-  playerAction(id);
-  if (checkWinner("O")) {
-    console.log("Humannn wins");
-    playerScore++;
-    updateScore(playerScore, "player-score");
-    setWinningComboID();
-    console.log("Winning combination: " + winningCombination)
-    console.log("Winning combination ID: " + winningComboID);
-    return;
-  } else if (checkTie()) {
-    console.log("ITS ATAAAY");
-    return;
+  let targetTile = tileIndex(id);
+  console.log("TILE INDEX: " + targetTile);
+
+  for (var i = 0; i < origBoard.length; i++) {
+    if (!isNaN(origBoard[targetTile])) {
+      // End game if player wins
+      playerAction(id);
+      if (checkWinner("O")) {
+        console.log("Humannn wins");
+        playerScore++;
+        updateScore(playerScore, "player-score");
+        setTimeout(resetBoard, 3000);
+        return;
+      } else if (checkTie()) {
+        tieScore++;
+        updateScore(tieScore, "tie-score");
+        console.log("ITS ATAAAY");
+        setTimeout(resetBoard, 3000);
+        return;
+      }
+
+      // End game if AI wins
+      aiAction();
+      if (checkWinner("X")) {
+        console.log("AI WINS!");
+        aiScore++;
+        updateScore(aiScore, "bot-score");
+        setTimeout(resetBoard, 3000);
+        return;
+      } else if (checkTie()) {
+        tieScore++;
+        updateScore(tieScore, "tie-score");
+        console.log("ITS ATAAAY");
+        setTimeout(resetBoard, 3000);
+        return;
+      }
+    } else {
+      console.log("Tile already selected!");
+    }
   }
 
-  // End game if AI wins
-  aiAction();
-  if (checkWinner("X")) {
-    console.log("AI WINS!");
-    aiScore++;
-    updateScore(aiScore, "bot-score");
-;
-    return;
-  } else if (checkTie()) {
-    console.log("ITS ATAAAY");
-    return;
-  }
+  
 }
 
 function playerAction(id) {
@@ -190,8 +206,20 @@ function updateScore(newValue, targetID) {
   element.innerText = newValue;
 }
 
-function setWinningComboID() {
-  for(var i = 0; i < winningCombination.length; i++) {
-    winningCombination.push(tileID(winningCombination[i]));
+function resetBoard() {
+  origBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  let boardIDs = [
+    "p0-icon",
+    "p1-icon",
+    "p2-icon",
+    "p3-icon",
+    "p4-icon",
+    "p5-icon",
+    "p6-icon",
+    "p7-icon",
+    "p8-icon",
+  ];
+  for (let i = 0; i < boardIDs.length; i++) {
+    document.getElementById(boardIDs[i]).src = ".";
   }
 }
