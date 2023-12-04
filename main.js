@@ -17,9 +17,7 @@ let boardIDs = [
   "p7-icon",
   "p8-icon",
 ];
-
-// console.log(boardBool);
-// console.log(boardIcon);
+var origBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function changeColor(colorChoice) {
   document.getElementById("bot-name").style.color = colorChoice;
@@ -53,6 +51,7 @@ function setIconX(id, icon) {
     document.getElementById(id).src = "./images/x.svg";
     document.getElementById(id).style.width = "150px";
     markBoard(id);
+
     if (checkWin("x")) {
       console.log("Player X Wins!");
       player1Score++;

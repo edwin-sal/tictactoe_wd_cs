@@ -70,6 +70,12 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+}
+
+.iconX, .iconO {
+  position: absolute;
+  display: none;
 }
 
 .tile:active {
