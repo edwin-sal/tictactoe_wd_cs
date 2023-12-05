@@ -423,12 +423,12 @@ footer a:hover::after {
   #homepage {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: initial;
     gap: 20px;
     padding: 0 20px;
-    height: 100vh;
+    height: 140vh;
   }
 
   #homepage a {
@@ -480,4 +480,26 @@ footer a:hover::after {
   footer {
     text-align: center;
   }
+
+  .history-card-back {
+    width: 350px;
+  }
+
+  .history-card-back p {
+    font-size: 17.5px;
+  }
+
+  .history-card-front img {
+    width: 350px;
+  }
+
+  .technology {
+    display: flex;
+    width: 350px;
+  }
+
+  h1 {
+    color: green;
+  }
+
 }
