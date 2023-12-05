@@ -428,7 +428,7 @@ footer a:hover::after {
     gap: initial;
     gap: 20px;
     padding: 0 20px;
-    height: 140vh;
+    height: 110vh;
   }
 
   #homepage a {
@@ -496,5 +496,11 @@ footer a:hover::after {
   .technology {
     display: flex;
     width: 350px;
+  }
+
+  .history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

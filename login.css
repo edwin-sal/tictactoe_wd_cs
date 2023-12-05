@@ -118,3 +118,17 @@ footer a {
     position: relative;
     padding: 0 5px;
 }
+
+@media (max-width: 800px) {
+  header {
+  padding: 12px 0 0 12px;
+}
+
+  header a {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 0 30px;
+  }
+}
