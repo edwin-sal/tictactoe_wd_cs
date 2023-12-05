@@ -313,9 +313,6 @@ footer a:hover::after {
 }
 
 @media (max-width: 1700px) {
-  h1 {
-    color: blue;
-  }
 
   header {
     padding: 20px 0 0 0;
@@ -335,13 +332,25 @@ footer a:hover::after {
   }
 }
 
-@media (max-width: 500px) {
-  #sidebar-button {
-    display: block;
+@media (max-width: 1230px) {
+  #about-technologies {
+    height: initial;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
   }
 
-  h1 {
-    color: yellow;
+  .technologies-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  #sidebar-button {
+    display: block;
+    cursor: pointer;
+    position: fixed;
   }
 
   header {
@@ -415,7 +424,7 @@ footer a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: initial;
+    align-items: center;
     gap: initial;
     gap: 20px;
     padding: 0 20px;
@@ -423,7 +432,7 @@ footer a:hover::after {
   }
 
   #homepage a {
-    margin: 0 30px;
+    /* margin: 0 10px; */
   }
 
   .homepage-items {
