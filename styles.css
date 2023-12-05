@@ -327,8 +327,55 @@ footer a:hover::after {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   h1 {
-    color: red;
+    color: yellow;
+  }
+
+  body {
+    max-width: 500px;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  #homepage {
+    display: block;
+  }
+  
+  .homepage-items {
+    display: block;
+  }
+
+  #about-page {
+    display: block;
+  }
+
+  #about-history {
+    display: block;
+  }
+  .history-cards {
+    display: block;
+  }
+
+  .history-card-back {
+    display: block;
+  }
+
+  #about-technologies {
+    display: block;
+  }
+
+  .technology {
+    display: block;
+  }
+
+  .technologies-cards {
+    display: block;
+  }
+
+  footer {
+    display: block;
   }
 }
