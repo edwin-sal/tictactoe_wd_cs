@@ -497,9 +497,4 @@ footer a:hover::after {
     display: flex;
     width: 350px;
   }
-
-  h1 {
-    color: green;
-  }
-
 }

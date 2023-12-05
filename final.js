@@ -19,16 +19,22 @@ function tileClick(id) {
       // End game if player wins
       playerAction(id);
       if (checkWinner("O")) {
-        console.log("Humannn wins");
         playerScore++;
         updateScore(playerScore, "player-score");
         setTimeout(resetBoard, 3000);
+
+        setTimeout(() => {
+          alert("Player Wins!");
+        }, 700);
         return;
       } else if (checkTie()) {
         tieScore++;
         updateScore(tieScore, "tie-score");
-        console.log("ITS ATAAAY");
         setTimeout(resetBoard, 3000);
+
+        setTimeout(() => {
+          alert("It's a TIE!");
+        }, 700);
         return;
       }
 
@@ -36,26 +42,30 @@ function tileClick(id) {
       aiAction();
       // setTimeout(aiAction, 500);
       if (checkWinner("X")) {
-        console.log("AI WINS!");
         aiScore++;
         updateScore(aiScore, "bot-score");
         setTimeout(resetBoard, 3000);
+        
+        setTimeout(() => {
+          alert("Boss Bert Wins!");
+        }, 700);
         return;
       } else if (checkTie()) {
         tieScore++;
         updateScore(tieScore, "tie-score");
-        console.log("ITS ATAAAY");
         setTimeout(resetBoard, 3000);
+
+        setTimeout(() => {
+          alert("It's a TIE!");
+        }, 700);
         return;
-      } else{
-        console.log("Not ye")
+      } else {
+        console.log("Not ye");
       }
     } else {
       console.log("Tile already selected!");
     }
   }
-
-  
 }
 
 function playerAction(id) {
@@ -78,9 +88,9 @@ function aiAction() {
   aiMove = false;
   playerMove = true;
   console.log("End of line by ai action");
-    setTimeout(() => {
-      setIconX(id);
-    }, 500);
+  setTimeout(() => {
+    setIconX(id);
+  }, 500);
 }
 
 function setIconX(id) {
