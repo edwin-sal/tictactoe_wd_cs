@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>!TicTacToe</title>
     <link rel="stylesheet" href="styles.css" />
-     <link rel="icon" type="image/x-icon" href="/images/red_board.ico">
+    <link rel="icon" type="image/x-icon" href="/images/red_board.ico" />
+    <link rel="stylesheet" href="css_effects.css" />
   </head>
   <body>
     <header id="header">
@@ -16,6 +17,16 @@
           <li><a href="./login.html">Login</a></li>
         </ul>
       </nav>
+      <img src="./images/menu-icon.svg" alt="" id="sidebar-button" width="40px" onclick="openNav()">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#header">Home</a>
+        <a href="#about-page">About</a>
+        <a href="./login.html">Login</a>
+        <!-- <a href="#">Contact</a> -->
+      </div>
     </header>
     <main>
       <section id="homepage">
@@ -150,7 +161,9 @@
                 </p>
               </div>
               <div class="about-button">
-                <a href="https://en.wikipedia.org/wiki/Javascript" target="_blank"
+                <a
+                  href="https://en.wikipedia.org/wiki/Javascript"
+                  target="_blank"
                   >Read More</a
                 >
               </div>
@@ -166,5 +179,6 @@
       </footer>
     </main>
     <script src="main.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

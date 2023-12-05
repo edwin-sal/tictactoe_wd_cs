@@ -325,6 +325,10 @@ footer a:hover::after {
   #about-page {
     gap: 80px;
   }
+
+  #mySidenav {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -334,6 +338,18 @@ footer a:hover::after {
 
   body {
     max-width: 500px;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #mySidenav {
+    display: block;
   }
 
   nav ul {
