@@ -303,3 +303,20 @@ function resetBoard() {
     enableClick();
   }, 500);
 }
+
+function scaleText(id) {
+  var textElement = document.getElementById(playerID);
+  textElement.classList.add("text-scale");
+
+  setTimeout(function () {
+    textElement.classList.add("scale-effect");
+  }, 10);
+
+  setTimeout(function () {
+    textElement.classList.remove("scale-effect");
+  }, 510);
+
+  setTimeout(function () {
+    textElement.classList.remove("text-scale");
+  }, 1010);
+}
