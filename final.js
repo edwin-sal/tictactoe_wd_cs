@@ -42,21 +42,20 @@ function tileClick(id) {
       // End game if player wins
       playerAction(id);
       if (checkWinner("O")) {
-        playerScore++;
-        updateScore(playerScore, "player-score");
         setTimeout(resetBoard, 3000);
 
         setTimeout(() => {
           alert("Player Wins!");
+          playerScore++;
+          updateScore(playerScore, "player-score");
         }, 700);
         return;
       } else if (checkTie()) {
-        tieScore++;
-        updateScore(tieScore, "tie-score");
         setTimeout(resetBoard, 3000);
-
         setTimeout(() => {
           alert("It's a TIE!");
+          tieScore++;
+          updateScore(tieScore, "tie-score");
         }, 700);
         return;
       }
@@ -65,21 +64,22 @@ function tileClick(id) {
       aiAction();
       // setTimeout(aiAction, 500);
       if (checkWinner("X")) {
-        aiScore++;
-        updateScore(aiScore, "bot-score");
         setTimeout(resetBoard, 3000);
         
         setTimeout(() => {
           alert("Bot Wins!");
+          aiScore++;
+          updateScore(aiScore, "bot-score");
         }, 700);
         return;
       } else if (checkTie()) {
-        tieScore++;
-        updateScore(tieScore, "tie-score");
+        
         setTimeout(resetBoard, 3000);
 
         setTimeout(() => {
           alert("It's a TIE!");
+          tieScore++;
+          updateScore(tieScore, "tie-score");
         }, 700);
         return;
       } else {
@@ -115,7 +115,7 @@ function aiAction() {
   setTimeout(() => {
     setIconX(id);
     enableClick();
-  }, 500);
+  }, 400);
 }
 
 function setIconX(id) {
