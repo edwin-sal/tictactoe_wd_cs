@@ -324,7 +324,6 @@ footer a:hover::after {
 }
 
 @media (max-width: 1700px) {
-
   header {
     padding: 20px 0 0 0;
     margin-right: 20px;
@@ -423,8 +422,13 @@ footer a:hover::after {
     display: block;
   }
 
+  body {
+    width: 100vw;
+  }
+
   h1 {
     font-size: 80px;
+    /* text-align: center; */
   }
 
   header {
@@ -452,6 +456,11 @@ footer a:hover::after {
     gap: 25px;
   }
 
+  .board-img img {
+    width: 350px;
+    height: 350px;
+  }
+
   #about-page {
     display: flex;
     flex-direction: column;
@@ -464,7 +473,8 @@ footer a:hover::after {
     color: whitesmoke;
   }
 
-  #about-history, #about-technologies {
+  #about-history,
+  #about-technologies {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -474,6 +484,24 @@ footer a:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+  }
+
+  .history {
+    width: 100%;
+  }
+
+  .history-card-back,
+  .history-card-front {
+    width: 320px;
+  }
+
+  .history-card-back p {
+    font-size: 16px;
+  }
+
+  .history-card-front img {
+    width: 320px;
   }
 
   #about-technologies {
@@ -486,22 +514,12 @@ footer a:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 300px; */
   }
 
   footer {
+    margin-top: 0;
     text-align: center;
-  }
-
-  .history-card-back {
-    width: 350px;
-  }
-
-  .history-card-back p {
-    font-size: 17.5px;
-  }
-
-  .history-card-front img {
-    width: 350px;
   }
 
   .technology {
@@ -513,5 +531,13 @@ footer a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #about-project {
+    width: 280px;
+  }
+
+  #about-project p {
+    font-size: 13px;
   }
 }
