@@ -190,6 +190,11 @@ h1 {
   justify-content: space-around;
 }
 
+.line-break::after {
+  content: "\A";
+  white-space: pre;
+}
+
 .technology {
   width: 400px;
   height: 600px;
@@ -340,6 +345,10 @@ footer a:hover::after {
   #about-page {
     gap: 80px;
   }
+
+  .line-break {
+  display: none;
+}
 }
 
 @media (max-width: 1230px) {
