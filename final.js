@@ -33,6 +33,21 @@ function enableClick() {
   overlay.style.pointerEvents = "none";
 }
 
+// Detect Media Query
+const mq = window.matchMedia("(max-width: 800px)");
+
+function isMediaQueryActive() {
+  if (mq.matches) {
+    // The media query is active
+    console.log("Positive");
+    return true;
+  } else {
+    // The media query is not active
+    console.log("Nope");
+    return false;
+  }
+}
+
 function tileClick(id) {
   let targetTile = tileIndex(id);
   console.log("TILE INDEX: " + targetTile);
@@ -126,13 +141,27 @@ function aiAction() {
 }
 
 function setIconX(id) {
+  let iconSize = "0px";
+  if(isMediaQueryActive()) {
+    iconSize = "80px"
+  } else {
+    iconSize = "150px"
+  }
+
   document.getElementById(id).src = "./images/x.svg";
-  document.getElementById(id).style.width = "150px";
+  document.getElementById(id).style.width = iconSize;
 }
 
 function setIconO(id) {
+  if (isMediaQueryActive()) {
+    iconSize = "70px";
+  } else {
+    iconSize = "130px";
+  }
+
   document.getElementById(id).src = "./images/o.svg";
-  document.getElementById(id).style.width = "130px";
+  document.getElementById(id).style.width = iconSize;
+  isMediaQueryActive();
 }
 
 // Returns an index that maches the board depending on the tile selected by player
@@ -272,5 +301,5 @@ function resetBoard() {
 
   setTimeout(() => {
     enableClick();
-  },  500);
+  }, 500);
 }
