@@ -12,18 +12,18 @@ console.log("Initial board: " + origBoard);
 
 // Create an overlay the prevents user clicks
 // Create an overlay element
-var overlay = document.createElement('div');
-overlay.style.position = 'fixed';
-overlay.style.top = '0';
-overlay.style.left = '0';
-overlay.style.width = '100%';
-overlay.style.height = '100%';
-overlay.style.backgroundColor = 'transparent';
-overlay.style.zIndex = '9999';
+var overlay = document.createElement("div");
+overlay.style.position = "fixed";
+overlay.style.top = "0";
+overlay.style.left = "0";
+overlay.style.width = "100%";
+overlay.style.height = "100%";
+overlay.style.backgroundColor = "transparent";
+overlay.style.zIndex = "9999";
 
 // Add the overlay element to the document body
 document.body.appendChild(overlay);
-overlay.style.pointerEvents = 'none';
+overlay.style.pointerEvents = "none";
 
 function disableClick() {
   overlay.style.pointerEvents = "auto";
@@ -42,21 +42,25 @@ function tileClick(id) {
       // End game if player wins
       playerAction(id);
       if (checkWinner("O")) {
-        setTimeout(resetBoard, 3000);
+        setTimeout(resetBoard, 2500);
 
         setTimeout(() => {
+          disableClick();
           alert("Player Wins!");
           playerScore++;
           updateScore(playerScore, "player-score");
         }, 700);
+
         return;
       } else if (checkTie()) {
-        setTimeout(resetBoard, 3000);
+        setTimeout(resetBoard, 2500);
         setTimeout(() => {
+          disableClick();
           alert("It's a TIE!");
           tieScore++;
           updateScore(tieScore, "tie-score");
         }, 700);
+
         return;
       }
 
@@ -64,23 +68,26 @@ function tileClick(id) {
       aiAction();
       // setTimeout(aiAction, 500);
       if (checkWinner("X")) {
-        setTimeout(resetBoard, 3000);
-        
+        setTimeout(resetBoard, 2500);
+
         setTimeout(() => {
+          disableClick();
           alert("Bot Wins!");
           aiScore++;
           updateScore(aiScore, "bot-score");
         }, 700);
+
         return;
       } else if (checkTie()) {
-        
-        setTimeout(resetBoard, 3000);
+        setTimeout(resetBoard, 2500);
 
         setTimeout(() => {
+          disableClick();
           alert("It's a TIE!");
           tieScore++;
           updateScore(tieScore, "tie-score");
         }, 700);
+
         return;
       } else {
         console.log("Not ye");
@@ -262,4 +269,8 @@ function resetBoard() {
   for (let i = 0; i < boardIDs.length; i++) {
     document.getElementById(boardIDs[i]).src = ".";
   }
+
+  setTimeout(() => {
+    enableClick();
+  },  500);
 }
