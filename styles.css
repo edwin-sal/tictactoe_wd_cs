@@ -28,7 +28,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 15px;
   list-style: none;
 }
 
@@ -246,6 +246,7 @@ footer {
   display: flex;
   justify-content: center;
   padding-bottom: 54px;
+  /* margin-top: 40px;  */
 }
 
 footer a {
@@ -310,6 +311,16 @@ footer a:hover::after {
 
 #sidebar-button {
   display: none;
+}
+
+#about-project {
+  height: 250px;
+  text-align: center;
+  width: 500px;
+  /* background-color: darkslategrey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 1700px) {
