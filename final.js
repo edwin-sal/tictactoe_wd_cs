@@ -10,6 +10,29 @@ let winningComboID = [];
 
 console.log("Initial board: " + origBoard);
 
+// Create an overlay the prevents user clicks
+// Create an overlay element
+var overlay = document.createElement('div');
+overlay.style.position = 'fixed';
+overlay.style.top = '0';
+overlay.style.left = '0';
+overlay.style.width = '100%';
+overlay.style.height = '100%';
+overlay.style.backgroundColor = 'transparent';
+overlay.style.zIndex = '9999';
+
+// Add the overlay element to the document body
+document.body.appendChild(overlay);
+overlay.style.pointerEvents = 'none';
+
+function disableClick() {
+  overlay.style.pointerEvents = "auto";
+}
+
+function enableClick() {
+  overlay.style.pointerEvents = "none";
+}
+
 function tileClick(id) {
   let targetTile = tileIndex(id);
   console.log("TILE INDEX: " + targetTile);
@@ -47,7 +70,7 @@ function tileClick(id) {
         setTimeout(resetBoard, 3000);
         
         setTimeout(() => {
-          alert("Boss Bert Wins!");
+          alert("Bot Wins!");
         }, 700);
         return;
       } else if (checkTie()) {
@@ -79,6 +102,7 @@ function playerAction(id) {
 }
 
 function aiAction() {
+  disableClick();
   var indexByAI = minimax(origBoard, aiPlayer).index;
   console.log("Index by AI: " + indexByAI);
   var id = tileID(indexByAI);
@@ -90,6 +114,7 @@ function aiAction() {
   console.log("End of line by ai action");
   setTimeout(() => {
     setIconX(id);
+    enableClick();
   }, 500);
 }
 
