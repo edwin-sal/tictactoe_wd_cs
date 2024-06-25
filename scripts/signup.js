@@ -54,11 +54,16 @@ function signUpButtonEventListener() {
     console.log(`fName: ${firstNameElement.value} \nlName: ${lastNameElement.value} \nemail: ${emailElement.value} \npassword: ${passwordElement.value}`);
 
     // Insert account details into the userAccounts array
+    console.log(account.generateId());
     const accountDetails = {
+      id: account.generateId(),
       firstName: firstNameElement.value,
       lastName: lastNameElement.value,
       email: emailElement.value,
-      password: passwordElement.value
+      password: passwordElement.value,
+      win: 0,
+      lost: 0,
+      tie: 0
     };
 
     account.signUp(accountDetails);
