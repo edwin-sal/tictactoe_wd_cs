@@ -47,6 +47,21 @@ class Account {
       }
     });
   }
+
+  signUp(accountDetails) {
+    console.log(this.userAccounts);
+    this.userAccounts.push({
+      firstName: accountDetails.firstName,
+      lastName: accountDetails.lastName,
+      email: accountDetails.email,
+      password: accountDetails.password,
+      win: 0,
+      lost: 0,
+      tie: 0
+    });
+
+    console.log(this.userAccounts);
+  }
 }
 
 export const account = new Account();
