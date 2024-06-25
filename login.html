@@ -13,21 +13,21 @@
     <main>
       <div id="login">
         <h1 id="main-heading">Login with your Account</h1>
-        <form action="">
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            class="input-field"
-          />
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            class="input-field"
-          />
-          <button type="submit">Login</button>
-        </form>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          class="input-field js-email-input"
+          autocomplete="current-email"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          class="input-field js-password-input"
+          autocomplete="current-password"
+        />
+        <button class="js-login-button">Login</button>
         <footer>
           <p>
             Not a member yet?
@@ -36,6 +36,7 @@
         </footer>
       </div>
     </main>
-    <script src="account.js"></script>
+
+    <script src="./data/account.js"></script>
   </body>
 </html>

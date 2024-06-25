@@ -1,22 +1,67 @@
-let firstNameList = [];
-let lastName = [];
-let email = [];
-let password = [];      
+class Account {
+  userAccounts = [];
 
-function signUpFirstName() {
-    var firstName = document.getElementById("first-name");
-    firstName.push(firstName.value);
+  constructor() {
+    this.loadAccounts();
+    this.loginButtonEventListener();
+  }
+
+  loadAccounts() {
+    this.userAccounts = [
+      {
+        firstName: 'edwin',
+        lastName: 'sal',
+        email: 'salsal@gmail.com',
+        password: 'salsal',
+        win: 0,
+        lost: 0,
+        tie: 0
+      },
+      {
+        firstName: 'robert',
+        lastName: 'duran',
+        email: 'nba@gmail.com',
+        password: 'robertoxd',
+        win: 0,
+        lost: 0,
+        tie: 0
+      },
+      {
+        firstName: 'jinGi',
+        lastName: 'kulafi',
+        email: 'biryani@gmail.com',
+        password: 'ilove123',
+        win: 0,
+        lost: 0,
+        tie: 0
+      }
+    ];
+  }
+
+  login(email, password) {
+    this.userAccounts.forEach((account) => {
+      if(email === account.email && password === account.password) {
+        console.log('Logged in succesfully')
+
+      } else {
+        console.log(`User email: ${email} is not matched with ${account.email} \nUser password ${password} is not matched with ${account.password}`);
+      }
+    });
+  }
+
+  loginButtonEventListener() {
+    const loginButtonElement = document.querySelector('.js-login-button');
+    const emailInputElement = document.querySelector('.js-email-input');
+    const passwordInputElement = document.querySelector('.js-password-input');
+
+    loginButtonElement.addEventListener('click', () => {
+      const email = emailInputElement.value;
+      const password = passwordInputElement.value;
+
+      this.login(email, password);
+    });
+
+  }
 }
 
-function signUpFirstName() {
-  var firstName = document.getElementById("first-name").value;
-  firstNameList.push(firstName);
-  //   console.log(firstName);
-  console.log("First name list:", firstNameList);
-  localStorage.setItem("firstNameList", JSON.stringify(firstNameList)); // Store the updated list in localStorage
-        var li = localStorage.getItem("firstNameList");
-
-        console.log(li);
-
-  // Perform any further operations with the first name value here
-}
+const account = new Account();
