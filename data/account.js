@@ -3,7 +3,6 @@ class Account {
 
   constructor() {
     this.loadAccounts();
-    this.loginButtonEventListener();
   }
 
   loadAccounts() {
@@ -48,20 +47,6 @@ class Account {
       }
     });
   }
-
-  loginButtonEventListener() {
-    const loginButtonElement = document.querySelector('.js-login-button');
-    const emailInputElement = document.querySelector('.js-email-input');
-    const passwordInputElement = document.querySelector('.js-password-input');
-
-    loginButtonElement.addEventListener('click', () => {
-      const email = emailInputElement.value;
-      const password = passwordInputElement.value;
-
-      this.login(email, password);
-    });
-
-  }
 }
 
-const account = new Account();
+export const account = new Account();
